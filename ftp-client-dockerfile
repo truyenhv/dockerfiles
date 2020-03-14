@@ -4,7 +4,7 @@ FROM alpine
 
 RUN apk add lftp
 
-RUN echo 'set ftp:ssl-protect-data true \
-	set ftp:ssl-force  \
-	set ftp:ssl-auth TLS \
-	set ssl:verify-certificate no' >> /etc/lftp.conf
+RUN echo 'set ftp:ssl-protect-data true' >> /etc/lftp.conf
+RUN echo 'set ftp:ssl-force'  >> /etc/lftp.conf
+RUN echo 'set ftp:ssl-auth TLS' >> /etc/lftp.conf
+RUN echo 'set ssl:verify-certificate no' >> /etc/lftp.conf
