@@ -1,5 +1,7 @@
 FROM node:11-alpine
 
 RUN npm install -g @ionic/cli
-RUN apk add --no-cache git openssh python py-pip
+RUN apk add --no-cache git openssh python py-pip curl
 RUN pip install awscli
+
+ENTRYPOINT []
